@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Biblioteca Verbum | Biblioteca digital católica</title>
+    <meta name="description" content="Biblioteca digital católica com artigos de formação, Catecismo da Igreja Católica, Código de Direito Canônico e Compêndio da Doutrina Social da Igreja para download." />
+    <meta name="keywords" content="Biblioteca Verbum, biblioteca católica, artigos católicos, catecismo, direito canônico, doutrina social da Igreja, formação católica" />
+    <meta name="author" content="Biblioteca Verbum" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#14213d" />
+    <meta property="og:title" content="Biblioteca Verbum" />
+    <meta property="og:description" content="Fé, razão e tradição a serviço da verdade." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/biblioteca-verbum-logo.png" />
+    <link rel="icon" href="assets/biblioteca-verbum-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Lato:wght@400;700;900&family=Merriweather:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Library",
+        "name": "Biblioteca Verbum",
+        "description": "Biblioteca digital católica com artigos de formação e livros católicos para download.",
+        "areaServed": "Brasil",
+        "inLanguage": "pt-BR"
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#artigos">Pular para o conteúdo</a>
+
+    <header class="site-header" data-header>
+      <div class="container header-shell">
+        <a class="brand" href="#inicio" aria-label="Biblioteca Verbum - Início">
+          <img
+            src="assets/biblioteca-verbum-logo.png"
+            width="48"
+            height="48"
+            alt=""
+          />
+          <span>
+            <strong>Biblioteca</strong>
+            <b>Verbum</b>
+          </span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          data-nav-toggle
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="primary-nav" id="primary-navigation" data-nav>
+          <a href="#inicio">Início</a>
+          <a href="#artigos">Artigos</a>
+          <a href="#biblioteca">Biblioteca</a>
+          <a href="#sobre">Sobre</a>
+          <a class="nav-cta" href="#apoie">Apoie</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <img
+          class="hero-mark"
+          src="assets/biblioteca-verbum-logo.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <div class="hero-pattern" aria-hidden="true"></div>
+        <div class="container hero-inner">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Biblioteca digital católica</p>
+            <h1 id="hero-title">Biblioteca Verbum</h1>
+            <p class="hero-impact">
+              Conhecer a fé, amar a Igreja e formar a alma pela verdade.
+            </p>
+            <p class="hero-text">
+              Um espaço de formação católica com artigos, textos de estudo e livros
+              para download, a serviço da fé, da razão e da tradição.
+            </p>
+            <div class="hero-actions" aria-label="Ações principais">
+              <a class="btn btn-primary" href="#artigos">Ler artigos</a>
+              <a class="btn btn-light" href="#biblioteca">Baixar livros</a>
+              <a class="btn btn-outline" href="#apoie">Apoiar o projeto</a>
+            </div>
+          </div>
+
+          <aside class="hero-note reveal" aria-label="Resumo do projeto">
+            <span>BV</span>
+            <p>Fé, razão e tradição a serviço da verdade.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section-ivory articles-section" id="artigos" aria-labelledby="artigos-title">
+        <div class="container">
+          <div class="library-top reveal">
+            <div class="section-heading compact">
+              <p class="eyebrow">Artigos</p>
+              <h2 id="artigos-title">Artigos de formação católica</h2>
+              <p>
+                Textos enviados e organizados para estudo, catequese e
+                aprofundamento pessoal, com imagens, referências e leitura completa
+                na própria página.
+              </p>
+            </div>
+            <form class="library-search article-search" role="search">
+              <label class="sr-only" for="article-search-input">Buscar artigos</label>
+              <input
+                id="article-search-input"
+                type="search"
+                placeholder="Buscar por salvação, santos, Maria..."
+                autocomplete="off"
+                data-article-search
+              />
+            </form>
+          </div>
+
+          <div class="article-tabs reveal" aria-label="Filtros de artigos" data-article-filters></div>
+          <div class="article-grid" data-article-grid></div>
+          <p class="empty-state" hidden data-article-empty>
+            Nenhum artigo encontrado para a busca atual.
+          </p>
+        </div>
+      </section>
+
+      <section class="article-reader" id="artigo-leitura" hidden data-article-reader aria-labelledby="article-reader-title">
+        <div class="container">
+          <button class="reader-back" type="button" data-back-articles>Voltar aos artigos</button>
+          <article class="article-reader-shell" data-article-reader-content>
+            <p class="eyebrow">Artigo</p>
+            <h1 id="article-reader-title">Biblioteca Verbum</h1>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-light" id="biblioteca" aria-labelledby="biblioteca-title">
+        <div class="container">
+          <div class="library-top reveal">
+            <div class="section-heading compact">
+              <p class="eyebrow">Biblioteca</p>
+              <h2 id="biblioteca-title">Livros disponíveis para download</h2>
+              <p>
+                Arquivos enviados para o acervo da Biblioteca Verbum, organizados
+                para baixar em PDF.
+              </p>
+            </div>
+            <form class="library-search" role="search">
+              <label class="sr-only" for="library-search-input">Buscar livros</label>
+              <input
+                id="library-search-input"
+                type="search"
+                placeholder="Buscar por catecismo, direito, doutrina..."
+                autocomplete="off"
+                data-search
+              />
+            </form>
+          </div>
+
+          <div class="filter-bar reveal" aria-label="Filtros por tema">
+            <button class="filter-btn is-active" type="button" data-filter="Todos">Todos</button>
+            <button class="filter-btn" type="button" data-filter="Catecismo">Catecismo</button>
+            <button class="filter-btn" type="button" data-filter="Documentos">Documentos</button>
+            <button class="filter-btn" type="button" data-filter="Doutrina">Doutrina</button>
+          </div>
+
+          <div class="resource-grid" data-resource-grid>
+            <article
+              class="resource-card reveal"
+              data-category="Catecismo"
+              data-title="Catecismo da Igreja Católica"
+              data-keywords="catecismo igreja católica pdf livro oficial doutrina sacramentos moral oração download"
+            >
+              <div class="cover cover-gold">
+                <span>PDF</span>
+                <b>Catecismo</b>
+              </div>
+              <div class="resource-body">
+                <p class="resource-meta">Livro para download</p>
+                <h3>Catecismo da Igreja Católica</h3>
+                <p>
+                  Texto de referência para o estudo da fé católica, dos sacramentos,
+                  da vida moral e da oração cristã.
+                </p>
+                <a class="resource-link" href="assets/livros/catecismo-da-igreja-catolica.pdf" download>Baixar PDF</a>
+              </div>
+            </article>
+
+            <article
+              class="resource-card reveal"
+              data-category="Documentos"
+              data-title="Código de Direito Canônico"
+              data-keywords="código direito canônico igreja católica leis normas disciplina eclesial pdf download"
+            >
+              <div class="cover cover-blue">
+                <span>PDF</span>
+                <b>Direito</b>
+              </div>
+              <div class="resource-body">
+                <p class="resource-meta">Livro para download</p>
+                <h3>Código de Direito Canônico</h3>
+                <p>
+                  Documento fundamental para conhecer a organização jurídica, a
+                  disciplina e a vida institucional da Igreja.
+                </p>
+                <a class="resource-link" href="assets/livros/codigo-de-direito-canonico.pdf" download>Baixar PDF</a>
+              </div>
+            </article>
+
+            <article
+              class="resource-card reveal"
+              data-category="Doutrina"
+              data-title="Compêndio da Doutrina Social da Igreja"
+              data-keywords="compêndio doutrina social igreja dignidade humana bem comum solidariedade subsidiariedade pdf download"
+            >
+              <div class="cover cover-doctrine">
+                <span>PDF</span>
+                <b>Doutrina Social</b>
+              </div>
+              <div class="resource-body">
+                <p class="resource-meta">Livro para download</p>
+                <h3>Compêndio da Doutrina Social da Igreja</h3>
+                <p>
+                  Síntese ampla dos princípios da doutrina social católica para a vida
+                  pública, econômica, familiar e comunitária.
+                </p>
+                <a class="resource-link" href="assets/livros/compendio-da-doutrina-social-da-igreja.pdf" download>Baixar PDF</a>
+              </div>
+            </article>
+          </div>
+
+          <p class="empty-state" hidden data-empty-state>
+            Nenhum livro encontrado para a busca atual.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-blue" id="sobre" aria-labelledby="sobre-title">
+        <div class="container about-layout">
+          <div class="about-copy reveal">
+            <p class="eyebrow">Sobre</p>
+            <h2 id="sobre-title">Evangelização, formação e educação católica</h2>
+            <p>
+              A Biblioteca Verbum é um projeto católico independente dedicado a
+              tornar mais acessível o estudo da fé católica, da história da Igreja
+              e das grandes figuras do catolicismo.
+            </p>
+            <p>
+              O objetivo é reunir conteúdos confiáveis, bem organizados e
+              acolhedores para catequistas, jovens, estudantes, famílias e fiéis que
+              desejam conhecer melhor a verdade transmitida pela Igreja.
+            </p>
+          </div>
+          <div class="about-values reveal" aria-label="Valores do projeto">
+            <div>
+              <strong>Fé</strong>
+              <span>Conteúdo em comunhão com a tradição católica.</span>
+            </div>
+            <div>
+              <strong>Razão</strong>
+              <span>Estudo claro, responsável e intelectualmente honesto.</span>
+            </div>
+            <div>
+              <strong>Tradição</strong>
+              <span>Raízes antigas apresentadas com linguagem atual.</span>
+            </div>
+            <div>
+              <strong>Serviço</strong>
+              <span>Formação acessível para mais pessoas.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="support-section" id="apoie" aria-labelledby="apoie-title">
+        <div class="container support-layout support-layout-simple">
+          <div class="support-copy reveal">
+            <p class="eyebrow">Apoie este projeto</p>
+            <h2 id="apoie-title">Apoie a Biblioteca Verbum</h2>
+            <p>
+              Sua contribuição ajuda a manter este projeto vivo, ampliar o acervo e
+              levar formação católica de qualidade para mais pessoas.
+            </p>
+            <strong>Que Deus recompense sua generosidade.</strong>
+          </div>
+
+          <div class="pix-area reveal">
+            <p class="pix-recipient">PicPay em nome de <strong>Davi Emanuel</strong></p>
+            <label for="pix-key">Chave Pix</label>
+            <div class="pix-row">
+              <input
+                id="pix-key"
+                type="text"
+                value="8721607c-090b-4763-8d26-0b89ae796921"
+                readonly
+                data-pix-key
+              />
+              <button class="btn btn-pix" type="button" data-copy-pix>
+                Copiar chave Pix
+              </button>
+            </div>
+            <p class="copy-status" aria-live="polite" data-copy-status></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-layout">
+        <div class="footer-brand">
+          <img src="assets/biblioteca-verbum-logo.png" alt="" width="54" height="54" />
+          <div>
+            <strong>Biblioteca Verbum</strong>
+            <p>Fé, razão e tradição a serviço da verdade.</p>
+          </div>
+        </div>
+        <nav class="footer-links" aria-label="Links rápidos">
+          <a href="#inicio">Início</a>
+          <a href="#artigos">Artigos</a>
+          <a href="#biblioteca">Biblioteca</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#apoie">Apoie</a>
+        </nav>
+      </div>
+      <p class="footer-note">
+        Projeto católico independente de formação e evangelização.
+      </p>
+    </footer>
+
+    <script src="artigos-data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
