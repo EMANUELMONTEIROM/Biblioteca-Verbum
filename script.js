@@ -1,6 +1,7 @@
 const navToggle = document.querySelector("[data-nav-toggle]");
 const nav = document.querySelector("[data-nav]");
 const filterButtons = [...document.querySelectorAll("[data-filter]")];
+const filterJumpLinks = [...document.querySelectorAll("[data-filter-jump]")];
 const resourceCards = [...document.querySelectorAll(".resource-card")];
 const searchInput = document.querySelector("[data-search]");
 const emptyState = document.querySelector("[data-empty-state]");
@@ -315,6 +316,13 @@ window.addEventListener("popstate", handleArticleRoute);
 
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => setFilter(button.dataset.filter));
+});
+
+filterJumpLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    if (searchInput) searchInput.value = "";
+    setFilter(link.dataset.filterJump);
+  });
 });
 
 searchInput?.addEventListener("input", applyFilters);
